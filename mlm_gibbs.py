@@ -1,5 +1,6 @@
 #! -*- coding: utf-8 -*-
 # 结合MLM的Gibbs采样
+# 参考：https://kexue.fm/archives/8119
 
 from tqdm import tqdm
 import numpy as np
