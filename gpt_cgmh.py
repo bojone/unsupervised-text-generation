@@ -114,7 +114,7 @@ for _ in tqdm(range(steps), desc='Sampling'):
     # 选择位置
     idxs = [i for i in range(1, len(token_ids) - 1) if i not in masked_idxs]
     if op == 'insert':
-        idxs = list(set(idxs + masked_ends))
+        idxs = [0] + list(set(idxs + masked_ends))
     if not idxs:
         continue
     i = np.random.choice(idxs)
